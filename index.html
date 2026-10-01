@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoStream</title>
+</head>
+<body>
+    <!--Encabezado de la pagina-->
+    <header>
+        <nav>
+            <div class="nav-bar-left">
+                <!--Logo-->
+                <div class="logo">
+                    <img src="static/img/youtube.png" alt="youtube">
+                    <h1>Video<span>Stream</span></h1>
+                </div>
+                <!--Links-->
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Explorar</a></li>
+                    <li><a href="#">Mi lista</a></li>
+                </ul>
+            </div>
+            <div class="nav-bar-right">
+                <!--Barra de busqueda-->
+                <div class="search">
+                    <input type="text" id="buscarDestino">
+                    <button id="btnBuscar"><img src="" alt="lupa"></button>
+                </div>
+                <!--Botones de la navbar-->
+                <div>
+                    <button><img src="" alt="notifications"></button>
+                    <button><img src="" alt="profile"></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Contenido-->
+    <main>
+        <div class="section-up">
+            <!--Video que se esta reproduciendo-->
+            <div class="video-actual">
+                <!--Video-->
+                <div>
+                    <video src=""></video>
+                    <h2>Lagos y montañas</h2>
+                    <p>95 mil visualizaciones * 10 abr 2024</p>
+                </div>
+                <!--Interacciones del video-->
+                <div class="video-actions">
+                    <div class="like-btn">
+                        <img src="" alt="likes">
+                        <p>4,8 K</p>
+                    </div>
+                    <div class="dislike-btn">
+                        <img src="" alt="dislikes">
+                        <p>120</p>
+                    </div>
+                    <div class="share-btn">
+                        <img src="" alt="share">
+                        <p>Compartir</p>
+                    </div>
+                    <div class="add-btn">
+                        <img src="" alt="add">
+                        <p>Añadir a la cola</p>
+                    </div>
+                    <div class="more-btn">
+                        <img src="" alt="more">
+                    </div>
+                </div>
+                <!--Canal que publico el video-->
+                <div class="channel">
+                    <div class="channel-left">
+                        <h2>VideoStream</h2>
+                        <p>1,2 M de Suscriptores</p>
+                    </div>
+                    <!--Boton para suscribirse-->
+                    <div class="channel-right">
+                        <button class="suscribe">Suscribirse</button>
+                    </div>
+                </div>
+                <!--Descripcion del video-->
+                <div class="video-description">
+                    <p><a href="#">Un recorrido</a>
+                        Por los lagos más hermosos de la Patagonia y
+                        sus ambientes. Consejos, rutas y paisajes 
+                        imperdibles
+                    </p>
+                    <button>Mostrar más ></button>
+                </div>
+            </div>
+            <!--Videos en cola-->
+            <div class="videos-cola">
+                <div class="videos-cola-header">
+                    <h2>Siguiente en la cola</h2>
+                    <button>Limpiar cola</button>
+                </div>
+                <div class="videos-cola-videos">
+                    <div class="videos-cola-video">
+                        <div class="videos-cola-videos-left">
+                            <video src=""></video>
+                        </div>
+                        <div class="videos-cola-videos-middle">
+                            <h2>Explorando la Patagonia</h2>
+                            <p>VideoStream</p>
+                            <p>120 mil visualizaciones</p>
+                        </div>
+                        <div class="videos-cola-videos-right">
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <div class="videos-cola-video">
+                        <div class="videos-cola-videos-left">
+                            <video src=""></video>
+                        </div>
+                        <div class="videos-cola-videos-middle">
+                            <h2>Comida callejera</h2>
+                            <p>VideoStream</p>
+                            <p>98 mil visualizaciones</p>
+                        </div>
+                        <div class="videos-cola-videos-right">
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <div class="videos-cola-video">
+                        <div class="videos-cola-videos-left">
+                            <video src=""></video>
+                        </div>
+                        <div class="videos-cola-videos-middle">
+                            <h2>Ciudades del mundo</h2>
+                            <p>VideoStream</p>
+                            <p>210 mil visualizaciones</p>
+                        </div>
+                        <div class="videos-cola-videos-right">
+                            <button>X</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Videos recomendados-->
+            <div class="videos-recomendados">
+                <div class="videos-recomendados-videos">
+                    <div class="videos-recomendados-video-left">
+                        <video src=""></video>
+                    </div>
+                    <div class="videos-recomendados-video-middle">
+                        <h2>Rutas de trekking</h2>
+                        <p>VideoStream</p>
+                        <p>80 mil visualizaciones</p>
+                    </div>
+                    <div class="videos-recomendados-video-right">
+                        <button>+</button>
+                    </div>
+                </div>
+                <div class="videos-recomendados-videos">
+                    <div class="videos-recomendados-video-left">
+                        <video src=""></video>
+                    </div>
+                    <div class="videos-recomendados-video-middle">
+                        <h2>Fauna patagónica</h2>
+                        <p>VideoStream</p>
+                        <p>60 mil visualizaciones</p>
+                    </div>
+                    <div class="videos-recomendados-video-right">
+                        <button>+</button>
+                    </div>
+                </div>
+                <div class="videos-recomendados-videos">
+                    <div class="videos-recomendados-video-left">
+                        <video src=""></video>
+                    </div>
+                    <div class="videos-recomendados-video-middle">
+                        <h2>Atardeceres increíbles</h2>
+                        <p>VideoStream</p>
+                        <p>72 mil visualizaciones</p>
+                    </div>
+                    <div class="videos-recomendados-video-right">
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Seccion de abajo (Más videos)-->
+        <div class="section-down">
+            <div class="mas-videos">
+                <h2>Más videos</h2>
+                <div class="mas-videos-videos">
+                    <div class="mas-videos-video">
+                        <div class="mas-videos-video-up">
+                            <video src=""></video>
+                        </div>
+                        <div class="mas-videos-video-down">
+                            <h2>Rutas de trekking</h2>
+                            <p>80 mil visualizaciones</p>
+                        </div>
+                    </div>
+                    <div class="mas-videos-video">
+                        <div class="mas-videos-video-up">
+                            <video src=""></video>
+                        </div>
+                        <div class="mas-videos-video-down">
+                            <h2>Lagos y montañas</h2>
+                            <p>95 mil visualizaciones</p>
+                        </div>
+                    </div>
+                    <div class="mas-videos-video">
+                        <div class="mas-videos-video-up">
+                            <video src=""></video>
+                        </div>
+                        <div class="mas-videos-video-down">
+                            <h2>Fauna patagónica</h2>
+                            <p>60 mil visualizaciones</p>
+                        </div>
+                    </div>
+                    <div class="mas-videos-video">
+                        <div class="mas-videos-video-up">
+                            <video src=""></video>
+                        </div>
+                        <div class="mas-videos-video-down">
+                            <h2>Consejos para viajar</h2>
+                            <p>110 mil visualizaciones</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
