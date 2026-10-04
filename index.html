@@ -8,7 +8,7 @@
 </head>
 <body>
     <!--Encabezado de la pagina-->
-    <header>
+    <header id="inicio">
         <nav>
             <div class="nav-bar-left">
                 <!--Logo-->
@@ -18,9 +18,9 @@
                 </div>
                 <!--Links-->
                 <ul>
-                    <li><a href="#"><span>Inicio</span></a></li>
-                    <li><a href="#">Explorar</a></li>
-                    <li><a href="#">Mi lista</a></li>
+                    <li><a href="#inicio"><span>Inicio</span></a></li>
+                    <li><a href="#recomendados">Explorar</a></li>
+                    <li><a href="#cola">Mi lista</a></li>
                 </ul>
             </div>
             <div class="nav-bar-right">
@@ -43,38 +43,43 @@
             <!--Video que se esta reproduciendo-->
             <div class="video-actual">
                 <!--Video-->
-                <div>
-                    <video src="static/video/LagosYMontañas.mp4"></video>
+                <div class="main-video">
+                    <video src="static/video/LagosYMontañas.mp4" poster="static/img/LagosYMontañasMiniatura.png" controls></video>
                     <h2>Lagos y montañas</h2>
-                    <p>95 mil visualizaciones * 10 abr 2024</p>
+                    <p>95 mil visualizaciones · 10 abr 2024</p>
                 </div>
                 <!--Interacciones del video-->
                 <div class="video-actions">
                     <div class="like-btn">
-                        <img src="" alt="likes">
+                        <img src="static/img/like.png" alt="likes">
                         <p>4,8 K</p>
                     </div>
                     <div class="dislike-btn">
-                        <img src="" alt="dislikes">
+                        <img src="static/img/dislike.png" alt="dislikes">
                         <p>120</p>
                     </div>
                     <div class="share-btn">
-                        <img src="" alt="share">
+                        <img src="static/img/share.png" alt="share">
                         <p>Compartir</p>
                     </div>
                     <div class="add-btn">
-                        <img src="" alt="add">
+                        <img src="static/img/add.png" alt="add">
                         <p>Añadir a la cola</p>
                     </div>
                     <div class="more-btn">
-                        <img src="" alt="more">
+                        <img src="static/img/points.png" alt="more">
                     </div>
                 </div>
                 <!--Canal que publico el video-->
                 <div class="channel">
                     <div class="channel-left">
-                        <h2>VideoStream</h2>
-                        <p>1,2 M de Suscriptores</p>
+                        <div class="channel-logo">
+                            <img src="static/img/channel.png" alt="">
+                        </div>
+                        <div class="channel-info">
+                            <h2>VideoStream</h2>
+                            <p>1,2 M de Suscriptores</p>
+                        </div>
                     </div>
                     <!--Boton para suscribirse-->
                     <div class="channel-right">
@@ -88,96 +93,98 @@
                         sus ambientes. Consejos, rutas y paisajes 
                         imperdibles
                     </p>
-                    <button>Mostrar más ></button>
+                    <button>Mostrar más ▼</button>
                 </div>
             </div>
-            <!--Videos en cola-->
-            <div class="videos-cola">
-                <div class="videos-cola-header">
-                    <h2>Siguiente en la cola</h2>
-                    <button>Limpiar cola</button>
+            <div class="columna-derecha">
+                <!--Videos en cola-->
+                <div class="videos-cola" id="cola">
+                    <div class="videos-cola-header">
+                        <h2>Siguiente en la cola</h2>
+                        <button>Limpiar cola</button>
+                    </div>
+                    <div class="videos-cola-videos">
+                        <div class="videos-cola-video">
+                            <div class="videos-cola-videos-left">
+                                <video src="static/video/montañasMiniatura.mp4" class="videoMiniatura" muted loop></video>
+                            </div>
+                            <div class="videos-cola-videos-middle">
+                                <h2>Explorando la Patagonia</h2>
+                                <p>VideoStream</p>
+                                <p>120 mil visualizaciones</p>
+                            </div>
+                            <div class="videos-cola-videos-right">
+                                <button>x</button>
+                            </div>
+                        </div>
+                        <div class="videos-cola-video">
+                            <div class="videos-cola-videos-left">
+                                <video src="static/video/comida.mp4" class="videoMiniatura" muted loop></video>
+                            </div>
+                            <div class="videos-cola-videos-middle">
+                                <h2>Comida callejera</h2>
+                                <p>VideoStream</p>
+                                <p>98 mil visualizaciones</p>
+                            </div>
+                            <div class="videos-cola-videos-right">
+                                <button>x</button>
+                            </div>
+                        </div>
+                        <div class="videos-cola-video">
+                            <div class="videos-cola-videos-left">
+                                <video src="static/video/ciudad.mp4" class="videoMiniatura" muted loop></video>
+                            </div>
+                            <div class="videos-cola-videos-middle">
+                                <h2>Ciudades del mundo</h2>
+                                <p>VideoStream</p>
+                                <p>210 mil visualizaciones</p>
+                            </div>
+                            <div class="videos-cola-videos-right">
+                                <button>x</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="videos-cola-videos">
-                    <div class="videos-cola-video">
-                        <div class="videos-cola-videos-left">
+                <!--Videos recomendados-->
+                <div class="videos-recomendados" id="recomendados">
+                    <div class="videos-recomendados-videos">
+                        <div class="videos-recomendados-video-left">
                             <video src=""></video>
                         </div>
-                        <div class="videos-cola-videos-middle">
-                            <h2>Explorando la Patagonia</h2>
+                        <div class="videos-recomendados-video-middle">
+                            <h2>Rutas de trekking</h2>
                             <p>VideoStream</p>
-                            <p>120 mil visualizaciones</p>
+                            <p>80 mil visualizaciones</p>
                         </div>
-                        <div class="videos-cola-videos-right">
-                            <button>X</button>
+                        <div class="videos-recomendados-video-right">
+                            <button>+</button>
                         </div>
                     </div>
-                    <div class="videos-cola-video">
-                        <div class="videos-cola-videos-left">
+                    <div class="videos-recomendados-videos">
+                        <div class="videos-recomendados-video-left">
                             <video src=""></video>
                         </div>
-                        <div class="videos-cola-videos-middle">
-                            <h2>Comida callejera</h2>
+                        <div class="videos-recomendados-video-middle">
+                            <h2>Fauna patagónica</h2>
                             <p>VideoStream</p>
-                            <p>98 mil visualizaciones</p>
+                            <p>60 mil visualizaciones</p>
                         </div>
-                        <div class="videos-cola-videos-right">
-                            <button>X</button>
+                        <div class="videos-recomendados-video-right">
+                            <button>+</button>
                         </div>
                     </div>
-                    <div class="videos-cola-video">
-                        <div class="videos-cola-videos-left">
+                    <div class="videos-recomendados-videos">
+                        <div class="videos-recomendados-video-left">
                             <video src=""></video>
                         </div>
-                        <div class="videos-cola-videos-middle">
-                            <h2>Ciudades del mundo</h2>
+                        <div class="videos-recomendados-video-middle">
+                            <h2>Atardeceres increíbles</h2>
                             <p>VideoStream</p>
-                            <p>210 mil visualizaciones</p>
+                            <p>72 mil visualizaciones</p>
                         </div>
-                        <div class="videos-cola-videos-right">
-                            <button>X</button>
+                        <div class="videos-recomendados-video-right">
+                            <button>+</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!--Videos recomendados-->
-            <div class="videos-recomendados">
-                <div class="videos-recomendados-videos">
-                    <div class="videos-recomendados-video-left">
-                        <video src=""></video>
-                    </div>
-                    <div class="videos-recomendados-video-middle">
-                        <h2>Rutas de trekking</h2>
-                        <p>VideoStream</p>
-                        <p>80 mil visualizaciones</p>
-                    </div>
-                    <div class="videos-recomendados-video-right">
-                        <button>+</button>
-                    </div>
-                </div>
-                <div class="videos-recomendados-videos">
-                    <div class="videos-recomendados-video-left">
-                        <video src=""></video>
-                    </div>
-                    <div class="videos-recomendados-video-middle">
-                        <h2>Fauna patagónica</h2>
-                        <p>VideoStream</p>
-                        <p>60 mil visualizaciones</p>
-                    </div>
-                    <div class="videos-recomendados-video-right">
-                        <button>+</button>
-                    </div>
-                </div>
-                <div class="videos-recomendados-videos">
-                    <div class="videos-recomendados-video-left">
-                        <video src=""></video>
-                    </div>
-                    <div class="videos-recomendados-video-middle">
-                        <h2>Atardeceres increíbles</h2>
-                        <p>VideoStream</p>
-                        <p>72 mil visualizaciones</p>
-                    </div>
-                    <div class="videos-recomendados-video-right">
-                        <button>+</button>
                     </div>
                 </div>
             </div>
@@ -227,5 +234,6 @@
             </div>
         </div>
     </main>
+    <script src="static/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+<video src="static/video/LagosYMontañas.mp4" id="videoActual" muted loop></video>
+
+// Funcionalidad del video
+const video = document.getElementById('videoActual');
+//Hacer que al pasar el mouse por encima se reproduzca
+video.addEventListener('mouseenter', () => {
+  video.play();
+});
+//Hacer que al quitar el mouse por encima se pause
+video.addEventListener('mouseleave', () => {
+  video.pause();
+});
+Video chiko
