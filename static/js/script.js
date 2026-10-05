@@ -113,3 +113,66 @@ btnDislike.addEventListener("click", function () {
         }
     }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Obtener el contenedor principal de la cola de reproducción
+    const colaContainer = document.querySelector('.videos-cola-videos');
+
+    // 2. Obtener todos los botones de "Añadir a la cola" en la sección de recomendados
+    const botonesAddRecomendados = document.querySelectorAll('.videos-recomendados-video-right button');
+
+    // 3. Asignar el evento click a cada botón
+    botonesAddRecomendados.forEach((boton) => {
+        boton.addEventListener('click', (e) => {
+            // Encuentra la tarjeta contenedora del video recomendado actual
+            const tarjetaVideo = e.target.closest('.videos-recomendados-videos');
+
+            if (!tarjetaVideo) return;
+
+            // Extraer datos del video recomendado
+            const videoSrc = tarjetaVideo.querySelector('video').getAttribute('src');
+            const titulo = tarjetaVideo.querySelector('.videos-recomendados-video-middle h2').innerText;
+            const parrafos = tarjetaVideo.querySelectorAll('.videos-recomendados-video-middle p');
+            const canal = parrafos[0] ? parrafos[0].innerText : 'VideoStream';
+            const visualizaciones = parrafos[1] ? parrafos[1].innerText : '';
+
+            // Crear el nuevo contenedor de video para la cola
+            const nuevoVideoCola = document.createElement('div');
+            nuevoVideoCola.classList.add('videos-cola-video');
+
+            // Construir el HTML respetando la estructura original de la cola
+            nuevoVideoCola.innerHTML = `
+                <div class="videos-cola-videos-left">
+                    <video src="${videoSrc}" class="videoMiniatura" muted loop></video>
+                </div>
+                <div class="videos-cola-videos-middle">
+                    <h2>${titulo}</h2>
+                    <p>${canal}</p>
+                    <p>${visualizaciones}</p>
+                </div>
+                <div class="videos-cola-videos-right">
+                    <button class="btn-remove">x</button>
+                </div>
+            `;
+
+            // Permite eliminar este elemento de la cola al hacer clic en 'x'
+            nuevoVideoCola.querySelector('.btn-remove').addEventListener('click', () => {
+                nuevoVideoCola.remove();
+            });
+
+            // Agregar el elemento recién creado a la cola
+            colaContainer.appendChild(nuevoVideoCola);
+        });
+    });
+
+    // Opcional: Hacer funcionar el botón de eliminar 'x' en los elementos preexistentes de la cola
+    const botonesEliminarCola = document.querySelectorAll('.videos-cola-videos-right button');
+    botonesEliminarCola.forEach((boton) => {
+        boton.addEventListener('click', (e) => {
+            const itemCola = e.target.closest('.videos-cola-video');
+            if (itemCola) itemCola.remove();
+        });
+    });
+});
