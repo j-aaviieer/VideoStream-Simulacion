@@ -50,13 +50,13 @@
                 </div>
                 <!--Interacciones del video-->
                 <div class="video-actions">
-                    <div class="like-btn">
+                    <div id="btnLike" class="like-btn">
                         <img src="static/img/like.png" alt="likes">
-                        <p>4,8 K</p>
+                        <p id="countLike">4,8 K</p>
                     </div>
-                    <div class="dislike-btn">
+                    <div id="btnDislike" class="dislike-btn">
                         <img src="static/img/dislike.png" alt="dislikes">
-                        <p>120</p>
+                        <p id="countDislike">120</p>
                     </div>
                     <div class="share-btn">
                         <img src="static/img/share.png" alt="share">
@@ -78,22 +78,21 @@
                         </div>
                         <div class="channel-info">
                             <h2>VideoStream</h2>
-                            <p>1,2 M de Suscriptores</p>
+                            <p id="contadorSuscriptores">1,2 M de Suscriptores</p>
                         </div>
                     </div>
                     <!--Boton para suscribirse-->
                     <div class="channel-right">
-                        <button class="suscribe">Suscribirse</button>
+                        <button id="botonSuscribirse" class="suscribe">Suscribirse</button>
                     </div>
                 </div>
                 <!--Descripcion del video-->
                 <div class="video-description">
-                    <p><a href="#">Un recorrido</a>
-                        Por los lagos más hermosos de la Patagonia y
-                        sus ambientes. Consejos, rutas y paisajes 
-                        imperdibles
+                    <p>
+                        <a href="#">Un recorrido</a> Por los lagos más hermosos de la Patagonia y sus ambientes. Consejos, rutas y paisajes imperdibles.
+                        <span class="extra-info oculto">En este video te mostramos la famosa Ruta de los 7 Lagos, paradas en Lago Nahuel Huapi, Correntoso y Espejo, además de tips para acampar y mejores miradores para fotos.</span>
                     </p>
-                    <button>Mostrar más ▼</button>
+                    <button id="mostrarMas">Mostrar más ▼</button>
                 </div>
             </div>
             <div class="columna-derecha">
@@ -147,9 +146,12 @@
                 </div>
                 <!--Videos recomendados-->
                 <div class="videos-recomendados" id="recomendados">
+                    <div class="videos-recomendados-header">
+                        <h2>Recomendados</h2>
+                    </div>
                     <div class="videos-recomendados-videos">
                         <div class="videos-recomendados-video-left">
-                            <video src=""></video>
+                            <video src="static/video/trekking.mp4" class="videoMiniatura" muted loop></video>
                         </div>
                         <div class="videos-recomendados-video-middle">
                             <h2>Rutas de trekking</h2>
@@ -157,12 +159,12 @@
                             <p>80 mil visualizaciones</p>
                         </div>
                         <div class="videos-recomendados-video-right">
-                            <button>+</button>
+                            <button><img src="static/img/add.png" alt="add"></button>
                         </div>
                     </div>
                     <div class="videos-recomendados-videos">
                         <div class="videos-recomendados-video-left">
-                            <video src=""></video>
+                            <video src="static/video/videoMiniatura2.mp4" class="videoMiniatura" muted loop></video>
                         </div>
                         <div class="videos-recomendados-video-middle">
                             <h2>Fauna patagónica</h2>
@@ -170,12 +172,12 @@
                             <p>60 mil visualizaciones</p>
                         </div>
                         <div class="videos-recomendados-video-right">
-                            <button>+</button>
+                            <button><img src="static/img/add.png" alt="add"></button>
                         </div>
                     </div>
                     <div class="videos-recomendados-videos">
                         <div class="videos-recomendados-video-left">
-                            <video src=""></video>
+                            <video src="static/video/atardecer.mp4" class="videoMiniatura" muted loop></video>
                         </div>
                         <div class="videos-recomendados-video-middle">
                             <h2>Atardeceres increíbles</h2>
@@ -183,7 +185,7 @@
                             <p>72 mil visualizaciones</p>
                         </div>
                         <div class="videos-recomendados-video-right">
-                            <button>+</button>
+                            <button><img src="static/img/add.png" alt="add"></button>
                         </div>
                     </div>
                 </div>
@@ -196,7 +198,7 @@
                 <div class="mas-videos-videos">
                     <div class="mas-videos-video">
                         <div class="mas-videos-video-up">
-                            <video src=""></video>
+                            <video src="static/video/trekking.mp4" class="videoMiniatura" muted loop></video>
                         </div>
                         <div class="mas-videos-video-down">
                             <h2>Rutas de trekking</h2>
@@ -205,7 +207,7 @@
                     </div>
                     <div class="mas-videos-video">
                         <div class="mas-videos-video-up">
-                            <video src=""></video>
+                            <video src="static/video/LagosYMontañas.mp4" class="videoMiniatura" muted loop></video>
                         </div>
                         <div class="mas-videos-video-down">
                             <h2>Lagos y montañas</h2>
@@ -214,7 +216,7 @@
                     </div>
                     <div class="mas-videos-video">
                         <div class="mas-videos-video-up">
-                            <video src=""></video>
+                            <video src="static/video/videoMiniatura2.mp4" class="videoMiniatura" muted loop></video>
                         </div>
                         <div class="mas-videos-video-down">
                             <h2>Fauna patagónica</h2>
@@ -223,7 +225,7 @@
                     </div>
                     <div class="mas-videos-video">
                         <div class="mas-videos-video-up">
-                            <video src=""></video>
+                            <video src="static/video/montañasMiniatura.mp4" class="videoMiniatura" muted loop></video>
                         </div>
                         <div class="mas-videos-video-down">
                             <h2>Consejos para viajar</h2>

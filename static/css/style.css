@@ -223,6 +223,7 @@ ul li a span{
 }
 .video-actions div:hover {
     background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 .video-actions div img {
     width: 20px;
@@ -296,13 +297,16 @@ ul li a span{
     background: none;
     border: 0;
     padding: 0;
-    width: 100px;
+    width: 120px;
     font-weight: bold;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.8);
 }
 .video-description button:hover {
     color: black;
+}
+.oculto {
+    display: none;
 }
 .columna-derecha {
     display: flex;
@@ -318,7 +322,6 @@ ul li a span{
     height: fit-content;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    flex: 1;
     min-width: 300px;
 }
 .videos-cola-header {
@@ -330,7 +333,7 @@ ul li a span{
     border-bottom: solid 1px rgba(0, 0, 0, 0.2) ;
 }
 .videos-cola-header h2{
-    font-size: 1rem;        
+    font-size: 1.4rem;        
 }
 .videos-cola-header button{
     background-color: rgba(0, 0, 0, 0.15);
@@ -387,4 +390,139 @@ ul li a span{
     padding: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+/*VIDEOS RECOMENDADOS*/
+.videos-recomendados {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+.videos-recomendados-header {
+    padding: 10px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2) ;
+}
+.videos-recomendados-header h2{
+    font-size: 1.4rem;        
+}
+.videos-recomendados-videos {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    gap: 10px;
+}
+.videos-recomendados-videos:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.videos-recomendados-video-left {
+    width: 100px;
+    flex-shrink: 0;
+}
+.videos-recomendados-video-left video{
+    width: 100px;
+    border-radius: 5px;
+}
+.videos-recomendados-video-middle {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.videos-recomendados-video-middle h2{
+    font-size: 1rem;
+}
+.videos-recomendados-video-middle p{
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+.videos-recomendados-video-right {
+    display: flex;
+    align-items: center;
+
+}
+.videos-recomendados-video-right button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.videos-recomendados-video-right button img{
+    width: 20px;
+}
+
+/*MAS VIDEOS*/
+.section-down {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.mas-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mas-videos h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+
+.mas-videos-videos {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.mas-videos-video {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    flex: 1;
+    min-width: 0    ;
+}
+
+.mas-videos-video:hover {
+    transform: translateY(-3px);
+}
+
+.mas-videos-video-up {
+    width: 100%;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.mas-videos-video-up video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.mas-videos-video-down {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mas-videos-video-down h2 {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #0f0f0f;
+    line-height: 1.3;
+}
+
+.mas-videos-video-down p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
 }
